@@ -32,6 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
+
             <a
               href="/KRCC-Company-Profile.pdf"
               download="KRCC-Company-Profile.pdf"
@@ -145,6 +146,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
             <div className="space-y-2 text-xs text-slate-700">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-red-700" />
+                <a
+                  href="tel:+966530076628"
+                  className="hover:text-red-700 font-bold"
+                  dir="ltr"
+                >
+                  +966 530 076 628
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-red-700" />
+                <a
+                  href="tel:+966566200276"
+                  className="hover:text-red-700 font-bold"
+                  dir="ltr"
+                >
+                  +966 566 200 276
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-red-700" />
                 <a href="tel:+966530362363" className="hover:text-red-700 font-bold" dir="ltr">
                   +966 53 036 2363
                 </a>
@@ -158,7 +179,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
                   {t.company.email}
                 </a>
               </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-red-700" />
+                <a href="mailto:info@krcc-ksa.com" className="hover:text-red-700 break-all">
+                  info@krcc-ksa.com
+                </a>
               </div>
+            </div>
 
             {/* Language Selection Buttons */}
             <div className="pt-2">

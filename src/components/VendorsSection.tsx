@@ -479,7 +479,7 @@ export const VendorsSection: React.FC = () => {
 
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="mailto:info@krcc-ksa.com?subject=Vendor%20Verification%20Inquiry%20-%20KRCC"
+              href="mailto:khabeeralraida6@gmail.com?subject=Vendor%20Verification%20Inquiry%20-%20KRCC"
               className="px-5 py-2.5 bg-red-700 hover:bg-red-800 text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
             >
               {language === 'ar' ? 'طلب ملف الاعتماد الموثق' : 'Request Official Vendor File'}

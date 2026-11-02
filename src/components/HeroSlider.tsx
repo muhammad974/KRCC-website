@@ -112,7 +112,7 @@ interface HeroSliderProps {
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({ onSelectService, onOpenProfileModal }) => {
   const { language, dir } = useLanguage();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -270,14 +270,14 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onSelectService, onOpenP
               <div className="flex items-center gap-2 shrink-0">
                 <button
                   onClick={() => scrollTo(currentSlide.targetSection)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-red-700 hover:bg-red-800 text-white font-bold text-xs rounded-lg shadow-xs transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#b91c1c] hover:bg-[#991b1b] text-white font-bold text-xs rounded-lg shadow-xs transition-colors cursor-pointer"
                 >
                   <span>{language === 'ar' ? 'التفاصيل الهندسية' : 'Engineering Scope'}</span>
                   <ArrowIcon className="w-3.5 h-3.5" />
                 </button>
                 <button
                   onClick={() => scrollTo('contact')}
-                  className="inline-flex items-center gap-1 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs rounded-lg border border-slate-300 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1 px-3 py-2 text-slate-600 hover:text-slate-900 font-semibold text-xs rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
                 >
                   <span>{language === 'ar' ? 'طلب عرض أسعار' : 'Request Quotation'}</span>
                 </button>

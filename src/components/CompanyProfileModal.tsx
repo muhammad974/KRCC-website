@@ -50,7 +50,7 @@ export const CompanyProfileModal: React.FC<ModalProps> = ({ isOpen, onClose }) =
 
         {/* Content Body */}
         <div className="p-6 md:p-8 space-y-6 max-h-[70vh] overflow-y-auto">
-          {/* Quick Details Card */}
+          {/* Quick Details Card: Official Company Profile PDF */}
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200/90 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
@@ -127,7 +127,7 @@ export const CompanyProfileModal: React.FC<ModalProps> = ({ isOpen, onClose }) =
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-red-700" />
-                <span dir="ltr">+966 53 036 2363</span>
+                <span dir="ltr">+966 530 076 628 / +966 566 200 276</span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-3.5 h-3.5 text-red-700" />
@@ -135,7 +135,7 @@ export const CompanyProfileModal: React.FC<ModalProps> = ({ isOpen, onClose }) =
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-red-700" />
-                <span>info@krcc-ksa.com</span>
+                <span>khabeeralraida6@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-slate-600 sm:col-span-2 pt-2 border-t border-slate-200">
                 <span className="font-semibold text-slate-800">

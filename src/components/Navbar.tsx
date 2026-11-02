@@ -47,21 +47,21 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       {/* Top Utility Bar with Direct Contact Numbers - Light Corporate Palette */}
-      <div className="bg-slate-100 text-slate-700 text-xs py-2 px-4 border-b border-slate-200">
+      <div className="bg-slate-100/90 text-slate-700 text-xs py-2 px-4 border-b border-slate-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3 text-[11px] md:text-xs">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-red-700 text-white font-extrabold text-[10px] tracking-wider uppercase shadow-xs">
-              {t.company.since}
+          <div className="flex items-center gap-3 text-[11px] md:text-xs flex-wrap">
+            <span className="inline-flex items-center px-2 py-0.5 rounded bg-[#7a121d] text-white font-black text-[10px] tracking-wider uppercase">
+              {language === 'ar' ? 'منذ عام ٢٠٠٨' : 'SINCE 2008'}
             </span>
-            <span className="hidden sm:inline-block font-semibold text-slate-600">
+            <span className="hidden sm:inline-block font-semibold text-slate-700">
               {t.company.slogan}
             </span>
             <span className="hidden sm:inline-block text-slate-300">|</span>
-            <div className="flex items-center gap-1.5 text-slate-800">
+            <div className="flex items-center gap-1.5 text-slate-800 font-bold">
               <Phone className="w-3.5 h-3.5 text-red-700" />
               <a
                 href="tel:+966530362363"
-                className="hover:text-red-700 transition-colors font-semibold"
+                className="hover:text-red-700 transition-colors"
                 dir="ltr"
               >
                 +966 53 036 2363
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-3">
             <a
               href="mailto:info@krcc-ksa.com"
-              className="text-[11px] text-slate-600 hover:text-red-700 transition-colors hidden md:inline-block font-medium"
+              className="text-[11px] text-slate-700 hover:text-red-700 transition-colors hidden md:inline-block font-medium"
             >
               info@krcc-ksa.com
             </a>
@@ -88,11 +88,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Language Switcher Button */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white hover:bg-slate-50 text-slate-800 font-medium text-xs transition-colors cursor-pointer border border-slate-300 shadow-xs"
+              className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs transition-colors cursor-pointer border border-slate-300 shadow-xs"
               aria-label="Switch Language / تغيير اللغة"
             >
               <Globe className="w-3.5 h-3.5 text-red-700" />
-              <span className="font-bold">
+              <span>
                 {language === 'en' ? 'العربية' : 'English'}
               </span>
             </button>
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         className={`sticky top-0 z-40 w-full transition-all duration-200 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 py-2.5'
-            : 'bg-white shadow-xs border-b border-slate-200/80 py-3.5'
+            : 'bg-white shadow-xs border-b border-slate-200/80 py-3'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -118,17 +118,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => scrollTo(link.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-semibold transition-colors cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-xl text-sm transition-all cursor-pointer ${
                     isActive
-                      ? 'text-red-700 bg-red-50 font-bold border border-red-200/50'
-                      : 'text-slate-700 hover:text-red-700 hover:bg-slate-50'
+                      ? 'text-red-800 bg-[#fae8eb] font-bold border border-red-200/60 shadow-xs'
+                      : 'text-slate-700 font-semibold hover:text-red-700 hover:bg-slate-50'
                   }`}
                 >
                   {link.label}
@@ -139,11 +139,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Header Action Buttons */}
           <div className="hidden sm:flex items-center gap-2.5">
-            {/* Prominent Company Profile Download Button - Direct PDF Download */}
+            {/* Company Profile Download Button */}
             <a
               href="/KRCC-Company-Profile.pdf"
               download="KRCC-Company-Profile.pdf"
-              className="inline-flex items-center gap-2 px-3.5 py-2 bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-bold rounded-lg shadow-xs hover:shadow transition-all cursor-pointer border border-slate-300"
+              className="inline-flex items-center gap-2 px-3.5 py-2 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold rounded-xl shadow-xs transition-all cursor-pointer border border-slate-300"
               title={t.nav.downloadProfile}
             >
               <Download className="w-3.5 h-3.5 text-red-700" />
@@ -153,7 +153,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Request a Quote CTA */}
             <button
               onClick={() => scrollTo('contact')}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-red-700 hover:bg-red-800 text-white text-xs font-bold rounded-lg shadow-xs hover:shadow transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4.5 py-2.5 bg-[#7e1724] hover:bg-[#68131e] text-white text-xs font-bold rounded-xl shadow-xs hover:shadow transition-all cursor-pointer"
             >
               <span>{t.nav.requestQuote}</span>
             </button>

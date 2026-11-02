@@ -107,7 +107,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       `Location: ${formData.projectLocation || 'Saudi Arabia'}\n` +
       `Details: ${formData.projectDetails || 'Please contact me regarding project specifications.'}`
     );
-    return `https://wa.me/966530362363?text=${text}`;
+    return `https://wa.me/966530076628?text=${text}`;
   };
 
   return (
@@ -132,105 +132,105 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white text-slate-900 rounded-2xl p-7 shadow-sm border-t-4 border-red-700 border border-slate-200 space-y-6">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-red-700">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
                   {language === 'ar' ? 'البيانات الرسمية المعتمدة' : 'OFFICIAL CONTACT DIRECTORY'}
                 </span>
-                <h3 className="text-xl font-black mt-1 text-slate-900">
+                <h3 className="text-xl sm:text-2xl font-black mt-1 text-slate-900 tracking-tight">
                   {language === 'ar'
                     ? 'شركة خبير الرائدة للمقاولات'
                     : 'KHABEER AL RAIDA CONTRACTING COMPANY'}
                 </h3>
-                <p className="text-xs text-slate-500 mt-1">
+                <p className="text-xs uppercase font-semibold text-slate-500 mt-1 mb-6">
                   {t.company.slogan}
                 </p>
               </div>
 
               <div className="space-y-4 pt-2 border-t border-slate-200 text-sm">
-                {/* Phones */}
-                <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-red-50 text-red-700 shrink-0 mt-0.5 border border-red-200/60">
+                {/* 1. Direct Calling & Inquiries */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#fae8eb] text-[#800000] flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block mb-0.5">
-                      {t.contact.phoneTitle}
+                    <span className="text-xs font-medium text-slate-600 block mb-0.5">
+                      {language === 'ar' ? 'الاتصال المباشر والاستفسارات' : 'Direct Calling & Inquiries'}
                     </span>
-                    <div className="flex flex-col gap-1">
-                      <a
-                        href="tel:+966530362363"
-                        className="font-bold text-slate-900 hover:text-red-700 transition-colors text-base"
-                        dir="ltr"
-                      >
-                        +966 53 036 2363
-                      </a>
-                    </div>
+                    <a
+                      href="tel:+966530362363"
+                      className="text-lg sm:text-xl font-extrabold text-slate-900 hover:text-red-700 transition-colors block"
+                      dir="ltr"
+                    >
+                      +966 53 036 2363
+                    </a>
                   </div>
                 </div>
 
-                {/* Website */}
-                <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-red-50 text-red-700 shrink-0 mt-0.5 border border-red-200/60">
+                {/* 2. Official Corporate Website */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#fae8eb] text-[#800000] flex items-center justify-center shrink-0">
                     <Globe className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block mb-0.5">
-                      {t.contact.websiteTitle}
+                    <span className="text-xs font-medium text-slate-600 block mb-0.5">
+                      {language === 'ar' ? 'الموقع الرسمي للشركة' : 'Official Corporate Website'}
                     </span>
                     <a
                       href={t.company.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-red-700 hover:text-red-800 transition-colors text-base inline-flex items-center gap-1"
+                      className="text-base sm:text-lg font-bold text-[#800000] hover:underline transition-colors block"
                     >
-                      <span>{t.company.website}</span>
+                      www.krccksa.com
                     </a>
                   </div>
                 </div>
 
-                {/* Email */}
-                <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-red-50 text-red-700 shrink-0 mt-0.5 border border-red-200/60">
+                {/* 3. Corporate Inquiries Email */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#fae8eb] text-[#800000] flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block mb-0.5">
-                      {t.contact.emailTitle}
+                    <span className="text-xs font-medium text-slate-600 block mb-0.5">
+                      {language === 'ar' ? 'البريد الإلكتروني للشركات' : 'Corporate Inquiries'}
                     </span>
                     <a
-                      href={`mailto:${t.company.email}`}
-                      className="font-semibold text-slate-800 hover:text-red-700 transition-colors text-sm break-all"
+                      href="mailto:info@krcc-ksa.com"
+                      className="text-sm sm:text-base font-semibold text-slate-900 hover:text-red-700 transition-colors block"
                     >
-                      {t.company.email}
+                      info@krcc-ksa.com
                     </a>
-                    </div>
+                  </div>
                 </div>
 
-                {/* Headquarters / Region */}
-                <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-red-50 text-red-700 shrink-0 mt-0.5 border border-red-200/60">
+                {/* 4. Headquarters & Operations */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#fae8eb] text-[#800000] flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-slate-500 block mb-0.5">
-                      {t.contact.addressTitle}
+                    <span className="text-xs font-medium text-slate-600 block mb-0.5">
+                      {language === 'ar' ? 'المقر الرئيسي والعمليات' : 'Headquarters & Operations'}
                     </span>
-                    <span className="text-sm text-slate-700">
-                      {t.contact.addressValue}
+                    <span className="text-sm font-medium text-slate-800 leading-snug block">
+                      {language === 'ar'
+                        ? 'الرياض، المملكة العربية السعودية (خدمات تغطي كافة مناطق المملكة)'
+                        : 'Riyadh, Kingdom of Saudi Arabia (Kingdom-Wide Services)'}
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Direct WhatsApp Action Button */}
-              <div className="pt-4 border-t border-slate-200">
+              {/* Direct WhatsApp Action Button matching Image 2 */}
+              <div className="pt-2">
                 <a
                   href="https://wa.me/966530362363"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-xs transition-colors"
+                  className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 bg-[#198754] hover:bg-[#157347] text-white font-bold text-base rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>{t.contact.btnWhatsApp}</span>
+                  <span>{language === 'ar' ? 'محادثة سريعة عبر واتساب' : 'Quick Chat on WhatsApp'}</span>
                 </a>
               </div>
             </div>

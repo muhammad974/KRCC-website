@@ -69,93 +69,71 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Official Introduction, Accreditations & CTAs */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            {/* Company Monogram Badge with Since 2008 & Official Emblem */}
-            <div className="inline-flex flex-wrap items-center gap-3 px-5 py-3 rounded-full bg-white/95 border border-slate-300 text-sm text-slate-800 mb-5 shadow-xs w-fit">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
-              <span className="font-extrabold text-red-700 tracking-wider">KRCC</span>
-              <span className="text-slate-300">|</span>
-              <span className="px-2 py-0.5 rounded-full bg-red-700 font-extrabold text-xs text-white tracking-wider uppercase shadow-xs">
-                {language === 'ar' ? 'منذ عام ٢٠٠٨' : 'SINCE 2008'}
-              </span>
-              <span className="text-slate-300">|</span>
-              <span className="font-medium tracking-wide">
-                {language === 'ar'
-                  ? 'شركة خبير الرائدة للمقاولات'
-                  : 'KHABEER AL RAIDA CONTRACTING CO.'}
-              </span>
-              <span className="text-slate-300">|</span>
-              <span className="text-xs font-bold text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full">
-                {language === 'ar' ? 'السعودية · بريطانيا · الإمارات · باكستان' : 'KSA (HQ) · UK · UAE · Pakistan'}
-              </span>
+            {/* Top Badge matching Image 1 */}
+            <div className="flex flex-col gap-1.5 mb-6 w-fit">
+              <div className="inline-flex flex-wrap items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-slate-200/90 text-xs text-slate-700 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
+                <span className="font-extrabold text-slate-900 tracking-wider">KRCC</span>
+                <span className="px-2 py-0.5 rounded-full bg-[#b91c1c] font-black text-[10px] text-white tracking-wider uppercase">
+                  {language === 'ar' ? 'منذ عام ٢٠٠٨' : 'SINCE 2008'}
+                </span>
+                <span className="text-slate-300">|</span>
+                <span className="font-bold text-slate-800 tracking-wide text-xs">
+                  {language === 'ar'
+                    ? 'شركة خبير الرائدة للمقاولات'
+                    : 'KHABEER AL RAIDA CONTRACTING CO.'}
+                </span>
+                <span className="text-slate-300">|</span>
+              </div>
+              <div className="text-[11px] font-bold text-slate-600 px-3 tracking-wide">
+                {language === 'ar' ? 'السعودية (المقر) · بريطانيا · الإمارات · باكستان' : 'KSA (HQ) · UK · UAE · Pakistan'}
+              </div>
             </div>
 
-            {/* Official Required Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-black tracking-tight text-slate-900 leading-tight mb-4">
-              {t.hero.headline}
+            {/* Official Headline matching Image 1 */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1e293b] leading-[1.15] mb-4 tracking-tight">
+              {language === 'ar' ? (
+                <>
+                  قوة في الخدمة،
+                  <br />
+                  التزام بالجودة
+                </>
+              ) : (
+                <>
+                  Strength in Service,
+                  <br />
+                  Commitment to Quality
+                </>
+              )}
             </h1>
 
-            {/* Official Required Supporting Text */}
-            <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-8 max-w-xl">
-              {t.hero.subheadline}
+            {/* Supporting Description matching Image 1 */}
+            <p className="text-sm sm:text-base text-slate-500 font-normal leading-relaxed mb-8 max-w-xl">
+              {language === 'ar'
+                ? 'تقديم خدمات احترافية في العزل المائي، العزل الحراري، حلول الأرضيات، وتوريد مواد البناء مع التزام راسخ بالجودة والسلامة والأداء الموثوق.'
+                : 'Delivering professional waterproofing, thermal insulation, flooring solutions, and construction material supply with a commitment to quality, safety, and reliable performance.'}
             </p>
 
-            {/* Three Prominent Required CTAs */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
-              {/* CTA 1: Explore Our Services */}
+            {/* Two Required Action Buttons matching Image 1 */}
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Button 1: Explore Our Services */}
               <button
                 onClick={onExploreServices}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-red-700 hover:bg-red-800 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer group active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#b91c1c] hover:bg-[#991b1b] text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer group active:scale-[0.98]"
               >
-                <span>{t.hero.btnServices}</span>
+                <span>{language === 'ar' ? 'استكشف خدماتنا' : 'Explore Our Services'}</span>
                 <ArrowIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
-              {/* CTA 2: Download Company Profile */}
+              {/* Button 2: Download Company Profile */}
               <a
                 href="/KRCC-Company-Profile.pdf"
                 download="KRCC-Company-Profile.pdf"
-                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm rounded-xl border border-slate-300 hover:border-slate-400 transition-all cursor-pointer shadow-xs"
+                className="inline-flex items-center justify-center gap-2 px-4.5 py-3 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm rounded-xl border border-slate-300 hover:border-slate-400 transition-all cursor-pointer shadow-xs"
               >
                 <Download className="w-4 h-4 text-red-700" />
-                <span>{t.hero.btnProfile}</span>
+                <span>{language === 'ar' ? 'تحميل ملف الشركة' : 'Download Company Profile'}</span>
               </a>
-
-              {/* CTA 3: Contact Our Team */}
-              <button
-                onClick={onContactTeam}
-                className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs sm:text-sm rounded-xl border border-slate-300 transition-all cursor-pointer"
-              >
-                <PhoneCall className="w-4 h-4 text-slate-700" />
-                <span>{t.hero.btnContact}</span>
-              </button>
-            </div>
-
-            {/* Metrics & Scope Indicators */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 max-w-lg">
-              <div>
-                <div className="text-xl sm:text-2xl font-black text-red-700">
-                  {t.hero.stat1Number}
-                </div>
-                <div className="text-xs text-slate-500 mt-0.5">
-                  {t.hero.stat1Label}
-                </div>
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-black text-slate-900">
-                  {t.hero.stat2Number}
-                </div>
-                <div className="text-xs text-slate-500 mt-0.5">
-                  {t.hero.stat2Label}
-                </div>
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-black text-red-700">
-                  {t.hero.stat3Number}
-                </div>
-                <div className="text-xs text-slate-500 mt-0.5">
-                  {t.hero.stat3Label}
-                </div>
-              </div>
             </div>
           </div>
 
