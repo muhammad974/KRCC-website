@@ -127,7 +127,7 @@ export const CompanyProfileModal: React.FC<ModalProps> = ({ isOpen, onClose }) =
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-red-700" />
-                <span dir="ltr">+966 530 076 628 / +966 566 200 276</span>
+                <span dir="ltr">+966 53 036 2363</span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-3.5 h-3.5 text-red-700" />
@@ -135,7 +135,7 @@ export const CompanyProfileModal: React.FC<ModalProps> = ({ isOpen, onClose }) =
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-red-700" />
-                <span>khabeeralraida6@gmail.com</span>
+                <span>info@krcc-ksa.com</span>
               </div>
               <div className="flex items-center gap-2 text-slate-600 sm:col-span-2 pt-2 border-t border-slate-200">
                 <span className="font-semibold text-slate-800">

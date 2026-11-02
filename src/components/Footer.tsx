@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { KRCCLogo } from './KRCCLogo';
 import { servicesData, serviceDivisions } from '../data/servicesData';
 import { materialCategories } from '../data/materialsData';
-import { Download, Globe, Phone, Mail, MapPin, ArrowUp, FileCode } from 'lucide-react';
+import { Download, Globe, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 
 interface FooterProps {
   onOpenProfileModal: () => void;
@@ -145,22 +145,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
             <div className="space-y-2 text-xs text-slate-700">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-red-700" />
-                <a
-                  href="tel:+966530076628"
-                  className="hover:text-red-700 font-bold"
-                  dir="ltr"
-                >
-                  +966 530 076 628
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-red-700" />
-                <a
-                  href="tel:+966566200276"
-                  className="hover:text-red-700 font-bold"
-                  dir="ltr"
-                >
-                  +966 566 200 276
+                <a href="tel:+966530362363" className="hover:text-red-700 font-bold" dir="ltr">
+                  +966 53 036 2363
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -172,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
                   {t.company.email}
                 </a>
               </div>
-            </div>
+              </div>
 
             {/* Language Selection Buttons */}
             <div className="pt-2">
@@ -213,16 +199,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenProfileModal, onOpenDownlo
           
           {/* Quick Website Download Links */}
           <div className="flex flex-wrap items-center gap-3">
-            {onOpenDownloadModal && (
-              <button
-                onClick={onOpenDownloadModal}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold border border-emerald-300 transition-colors cursor-pointer"
-              >
-                <FileCode className="w-3.5 h-3.5 text-emerald-700" />
-                <span>{language === 'ar' ? 'تحميل الموقع (HTML / ZIP)' : 'Download Website (HTML / ZIP)'}</span>
-              </button>
-            )}
-
             <a
               href="/KRCC-Company-Profile.pdf"
               download="KRCC-Company-Profile.pdf"

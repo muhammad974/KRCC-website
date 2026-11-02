@@ -107,7 +107,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       `Location: ${formData.projectLocation || 'Saudi Arabia'}\n` +
       `Details: ${formData.projectDetails || 'Please contact me regarding project specifications.'}`
     );
-    return `https://wa.me/966530076628?text=${text}`;
+    return `https://wa.me/966530362363?text=${text}`;
   };
 
   return (
@@ -157,18 +157,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </span>
                     <div className="flex flex-col gap-1">
                       <a
-                        href="tel:+966530076628"
+                        href="tel:+966530362363"
                         className="font-bold text-slate-900 hover:text-red-700 transition-colors text-base"
                         dir="ltr"
                       >
-                        +966 530 076 628
-                      </a>
-                      <a
-                        href="tel:+966566200276"
-                        className="font-bold text-slate-900 hover:text-red-700 transition-colors text-base"
-                        dir="ltr"
-                      >
-                        +966 566 200 276
+                        +966 53 036 2363
                       </a>
                     </div>
                   </div>
@@ -209,7 +202,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     >
                       {t.company.email}
                     </a>
-                  </div>
+                    </div>
                 </div>
 
                 {/* Headquarters / Region */}
@@ -231,10 +224,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               {/* Direct WhatsApp Action Button */}
               <div className="pt-4 border-t border-slate-200">
                 <a
-                  href="https://wa.me/966530076628"
+                  href="https://wa.me/966530362363"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-xs transition-all text-sm cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-xs transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>{t.contact.btnWhatsApp}</span>
